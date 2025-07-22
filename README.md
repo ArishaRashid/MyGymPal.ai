@@ -334,15 +334,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Email**: support@mygympal.ai
+- **Email**: arisharashidk@gmail.com
 - **Issues**: [GitHub Issues](https://github.com/your-username/MyGymPal.ai/issues)
 - **Documentation**: [Wiki](https://github.com/your-username/MyGymPal.ai/wiki)
 
 ## 🔄 Version History
 
 - **v1.0.0**: Initial release with bicep curl and squat analysis
-- **v1.1.0**: Added support for push-ups and planks
-- **v1.2.0**: Improved accuracy and performance optimizations
 
 ---
 
