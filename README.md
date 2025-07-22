@@ -321,12 +321,7 @@ We welcome contributions! Please follow these steps:
 - Include unit tests for new features
 - Update documentation as needed
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
-
 - **MoveNet**: Google's real-time pose detection model
 - **TensorFlow**: Machine learning framework
 - **OpenCV**: Computer vision library
