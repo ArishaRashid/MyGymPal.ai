@@ -1,0 +1,1 @@
+# Core module containing fundamental functionality for the fitness application 
