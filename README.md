@@ -40,6 +40,50 @@ Video Capture → Frame Processing → MoveNet Pose Detection → CustomANN Clas
 
 This creates a real-time feedback loop that continuously analyzes and guides users toward proper exercise form.
 
+## 🧠 **CustomANN Architecture**
+
+MyGymPal.ai uses a custom Artificial Neural Network (CustomANN) for exercise form classification. Here's the detailed architecture:
+
+### **Neural Network Structure**
+
+#### **Dense Layers**
+- **First Dense Layer**: 64 units with ReLU activation
+  - Introduces non-linearity and mitigates vanishing gradient problem
+  - Enables learning of complex patterns in pose data
+- **Second Dense Layer**: 32 units with ReLU activation
+  - Further feature extraction and pattern recognition
+  - Maintains non-linearity for optimal learning
+
+#### **Regularization Layers**
+- **Dropout Layers**: 50% dropout rate
+  - Prevents overfitting by randomly deactivating neurons during training
+  - Improves model generalization on unseen data
+  - Reduces reliance on specific neurons
+
+#### **Normalization Layers**
+- **Batch Normalization**: Applied after each dense layer
+  - Stabilizes and speeds up training
+  - Normalizes activations to mitigate internal covariate shifts
+  - Ensures efficient network convergence
+
+#### **Output Layer**
+- **Single Unit**: Sigmoid activation function
+  - Binary classification (correct/incorrect form)
+  - Outputs probability between 0 and 1
+  - Represents class prediction confidence
+
+### **Training Configuration**
+
+#### **Loss Function**
+- **Binary Crossentropy**: Optimized for binary classification problems
+- Handles probability-based predictions effectively
+
+#### **Optimizer**
+- **RMSprop**: Learning rate of 0.01
+- Ideal for non-stationary objectives
+- Adaptive learning rate across training process
+- Efficient convergence on pose classification tasks
+
 ## 🚀 Features
 
 ### Core Functionality
