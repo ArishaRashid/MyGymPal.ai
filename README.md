@@ -96,9 +96,6 @@ MyGymPal.ai uses a custom Artificial Neural Network (CustomANN) for exercise for
 ### Supported Exercises
 - **Bicep Curls**: Complete form analysis and rep counting
 - **Squats**: Lower body exercise evaluation
-- **Push-ups**: Upper body strength assessment
-- **Planks**: Core stability analysis
-- **Lunges**: Dynamic movement tracking
 
 ### Technical Features
 - **Low Latency**: Optimized for real-time processing
