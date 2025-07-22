@@ -1,12 +1,44 @@
 # MyGymPal.ai - AI-Powered Fitness Application
 
-**MyGymPal.ai** is a cutting-edge fitness application that leverages artificial intelligence to provide real-time exercise form analysis, personalized feedback, and performance tracking. Built with MoveNet for pose detection and CustomANN for exercise classification, it offers an intelligent workout companion for fitness enthusiasts.
+**MyGymPal.ai** (formerly known as **Fitness Visionaire.ai**) is a cutting-edge fitness application that leverages artificial intelligence to provide real-time exercise form analysis, personalized feedback, and performance tracking. Built with MoveNet for pose detection and CustomANN for exercise classification, it offers an intelligent workout companion for fitness enthusiasts.
 
 ## 🎥 **Demo Video**
 
 Watch MyGymPal.ai in action: [YouTube Demo](https://youtu.be/l61iYnCN4VI?si=JsGZXa8WdFL5yXij)
 
 [![MyGymPal.ai Demo](https://img.youtube.com/vi/l61iYnCN4VI/0.jpg)](https://youtu.be/l61iYnCN4VI?si=JsGZXa8WdFL5yXij)
+
+## 🔄 **How It Works**
+
+MyGymPal.ai uses a sophisticated real-time processing pipeline to analyze exercise form and provide instant feedback:
+
+```
+Video Capture → Frame Processing → MoveNet Pose Detection → CustomANN Classification → Real-time Feedback
+```
+
+### **Technical Workflow**
+
+1. **🎥 Video Capture**: Accesses the device's camera and captures video of the user performing exercises
+2. **🖼️ Frame Processing**: Converts the video into individual frames for analysis
+3. **🤖 MoveNet Detection**: Feeds each frame into the pre-trained MoveNet model
+4. **📍 Keypoint Extraction**: MoveNet outputs 17 keypoints of the body for each frame
+5. **🧠 AI Classification**: Passes the keypoints to the trained CustomANN classifier to evaluate exercise correctness
+6. **✅ Form Analysis**: The classifier labels keypoints as correct/incorrect based on predefined criteria:
+   - Angle of the elbow
+   - Alignment of the wrist
+   - Distance of hand from shoulder
+   - Overall posture alignment
+7. **🔄 Decision Loop**: 
+   - **If Correct**: Continues processing the next frame
+   - **If Incorrect**: Identifies faulty keypoints and associated body parts
+8. **💬 User Feedback**: Provides specific instructions to correct posture:
+   - "Keep your elbow close to your body"
+   - "Do not bend your wrist"
+   - "Lift your hand higher"
+   - "Straighten your back"
+9. **🔄 Continuous Monitoring**: Returns to frame processing to monitor corrections
+
+This creates a real-time feedback loop that continuously analyzes and guides users toward proper exercise form.
 
 ## 🚀 Features
 
@@ -39,7 +71,7 @@ MyGymPal.ai/
 │   │   ├── pose_detection.py     # MoveNet pose detection
 │   │   └── visualization.py      # Visual rendering and UI
 │   ├── ml/                       # Machine learning components
-│   │   └── svm_classifier.py     # SVM model and analysis
+│   │   └── custom_classifier.py  # CustomANN model and analysis
 │   └── app/                      # Application logic
 │       └── main_app.py           # Main application entry point
 ├── config/                       # Configuration files
