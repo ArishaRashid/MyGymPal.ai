@@ -52,9 +52,6 @@ This creates a real-time feedback loop that continuously analyzes and guides use
 ### Supported Exercises
 - **Bicep Curls**: Complete form analysis and rep counting
 - **Squats**: Lower body exercise evaluation
-- **Push-ups**: Upper body strength assessment
-- **Planks**: Core stability analysis
-- **Lunges**: Dynamic movement tracking
 
 ### Technical Features
 - **Low Latency**: Optimized for real-time processing
